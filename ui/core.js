@@ -113,7 +113,7 @@ $.fn.extend( {
 				return overflowRegex.test( parent.css( "overflow" ) + parent.css( "overflow-y" ) + parent.css( "overflow-x" ) );
 			} ).eq( 0 );
 
-		return position === "fixed" || !scrollParent.length ? $( this[ 0 ].ownerDocument || document ) : scrollParent;
+		return position === "fixed" || !scrollParent.length ? $( this[ 0 ].ownerDocument || window.document ) : scrollParent;
 	},
 
 	uniqueId: ( function() {
@@ -294,11 +294,11 @@ if ( $.fn.jquery.substring( 0, 3 ) === "1.7" ) {
 }
 
 // deprecated
-$.ui.ie = !!/msie [\w.]+/.exec( navigator.userAgent.toLowerCase() );
+$.ui.ie = !!/msie [\w.]+/.exec( window.navigator.userAgent.toLowerCase() );
 
 $.fn.extend( {
 	disableSelection: ( function() {
-		var eventType = "onselectstart" in document.createElement( "div" ) ?
+		var eventType = "onselectstart" in window.document.createElement( "div" ) ?
 			"selectstart" :
 			"mousedown";
 
