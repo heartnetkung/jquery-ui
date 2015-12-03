@@ -1,4 +1,4 @@
-var jQuery = require('jquery');
+var jQuery = window.jQuery;
 
 /*!
  * jQuery UI Core 1.10.4
