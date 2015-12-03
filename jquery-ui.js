@@ -1,4 +1,4 @@
-var jQuery = require('jquery');
+var jQuery = window.jQuery;
 
 /*! jQuery UI - v1.10.3 - 2013-05-03
 * http://jqueryui.com
