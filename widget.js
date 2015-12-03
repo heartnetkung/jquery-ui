@@ -1,4 +1,4 @@
-var jQuery = require('jquery');
+var jQuery = window.jQuery;
 
 /*!
  * jQuery UI Widget 1.10.4
